@@ -482,9 +482,9 @@ int main(void)
         {
             snprintf(text,TEXT_SIZE,"Command received %c [%02x].\r\n",byte,byte);
             PrintSerial(text);
-            if ('1' <= byte && byte <= FRAMES+'1'-1)
+            if ('0' <= byte && byte <= FRAMES+'0'-1)
             { // change frame
-                frame = byte-'1';
+                frame = byte-'0';
                 snprintf(text,TEXT_SIZE,"Switching to frame %d.\r\n",frame);
                 PrintSerial(text);
             }
